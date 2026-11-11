@@ -517,7 +517,15 @@ td[contenteditable]:empty::before{content:"Click to type…";color:var(--muted);
     <button class="btn primary" type="button" data-close>Back to the story</button>
   </div>
 </div>
-
+<!-- PAGE 4: THE TRUTH BENEATH THE WAVES -->
+<main class="page" id="view-p4" tabindex="-1" hidden>
+  <iframe
+    src="fixed%20page%204.html"
+    title="Page 4 - The Truth Beneath the Waves"
+    style="width:100%; height:2400px; border:0; overflow:hidden;"
+    scrolling="no"
+></iframe>
+</main>
 <!-- Next page dialog -->
 <div class="overlay" id="nextDlg" role="dialog" aria-modal="true" aria-labelledby="nxT" aria-hidden="true">
   <div class="dialog">
@@ -977,6 +985,7 @@ document.getElementById("importLogFile").addEventListener("change", function(e){
   var VIEWS = {
   "cover": "view-cover",
   "page-2": "view-p2",
+  "page-4": "view-p4",
   "page-5": "view-p5",
   "ai-log": "view-log"
 };

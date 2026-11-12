@@ -81,7 +81,13 @@ footer{text-align:center;opacity:.75;font-size:16px;margin:24px 0 8px}
 <div id="hint" class="note">⭐ Answer the quiz correctly to hear Oliver’s closing words.</div>
 <section id="closing" class="talk" aria-live="polite">
 <div class="line right"><div class="av" id="cav"></div><div class="bub"><b>Oliver</b>Now that we understand the problem, let’s discover how humans and technology can help protect Blue Bay!</div></div>
-<button class="btn" id="pg5" type="button">Next Page: Page 5 →</button>
+<button class="btn" type="button" onclick="window.parent.location.hash='page-3'">
+  ← Back to Page 3
+</button>
+
+<button class="btn" id="pg5" type="button">
+  Next Page: Page 5 →
+</button>
 
 </section>
 <footer>Sources: UNEP · UNEP (2021) · NOAA · Tap a card’s Source button to read more</footer>
@@ -168,7 +174,9 @@ function showClosing(){
   document.getElementById('hint').hidden=true;
 }
 document.getElementById('cav').innerHTML=av.Oliver;
-document.getElementById('skipQuiz').onclick=showClosing;
+document.getElementById('skipQuiz').addEventListener('click', function(){
+  showClosing();
+});
 document.getElementById('pg5').onclick=()=>{window.parent.location.hash='page-5'};
 </script>
 </body>
